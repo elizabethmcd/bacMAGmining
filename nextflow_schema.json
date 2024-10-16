@@ -35,12 +35,16 @@
           "type": "string",
           "description": "Path to directory of pre-downloaded antismash databases"
         },
+        "pfam_db": {
+          "type": "string",
+          "description": "Path to directory of pre-downloading Pfam-A database (this should be included with antismash db download)"
+        },
         "peptides_fasta": {
           "type": "string",
           "description": "Path to FASTA file of peptides to compare hits against"
         }
       },
-      "required": ["antismash_db", "peptides_fasta"]
+      "required": ["antismash_db", "peptides_fasta", "pfam_db"]
     }
   },
   "allOf": [
