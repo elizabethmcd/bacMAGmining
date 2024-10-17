@@ -87,7 +87,7 @@ process smorfinder {
     memory = '10 GB'
     cpus = 4
 
-    container "812206152185.dkr.ecr.us-west-2.amazonaws.com/elizabethmcd/smorfinder:latest`"
+    container "812206152185.dkr.ecr.us-west-2.amazonaws.com/elizabethmcd/smorfinder:latest"
     conda "envs/smorfinder.yml"
 
     input:
