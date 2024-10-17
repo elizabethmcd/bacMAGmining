@@ -87,7 +87,7 @@ process smorfinder {
     memory = '10 GB'
     cpus = 4
 
-    container "elizabethmcd/smorfinder:latest"
+    container "812206152185.dkr.ecr.us-west-2.amazonaws.com/elizabethmcd/smorfinder:latest`"
     conda "envs/smorfinder.yml"
 
     input:
@@ -314,7 +314,7 @@ process characterize_peptides {
     memory = "5 GB"
     cpus = 1
 
-    container "elizabethmcd/peptides:latest"
+    container "812206152185.dkr.ecr.us-west-2.amazonaws.com/elizabethmcd/peptides:latest`"
     conda "envs/peptides.yml"
 
     input:
