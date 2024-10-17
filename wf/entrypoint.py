@@ -99,6 +99,10 @@ def nextflow_runtime(pvc_name: str, input_genomes: LatchDir, outdir: typing_exte
 
     profiles = ','.join(profile_list)
 
+    antismash_db_dir = Path(antismash_db.local_path)
+    antismash_shared_dir = shared_dir / antismash_db_dir.name
+    shutil.move(str(antismash_db_dir), str(antismash_shared_dir))
+
     cmd = [
         "/root/nextflow",
         "run",
@@ -112,7 +116,7 @@ def nextflow_runtime(pvc_name: str, input_genomes: LatchDir, outdir: typing_exte
         "-resume",
                 *get_flag('input_genomes', input_genomes),
                 *get_flag('outdir', outdir),
-                *get_flag('antismash_db', antismash_db),
+                *get_flag("antismash_db", antismash_shared_dir),
                 *get_flag('pfam_db', pfam_db),
                 *get_flag('peptides_fasta', peptides_fasta)
     ]
