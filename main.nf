@@ -117,7 +117,7 @@ process combine_smorf_proteins {
     memory = '10 GB'
     cpus = 1
     
-    container "quay.io/biocontainers/mulled-v2-949aaaddebd054dc6bded102520daff6f0f93ce6:aa2a3707bfa0550fee316844baba7752eaab7802-0"
+    container "812206152185.dkr.ecr.us-west-2.amazonaws.com/elizabethmcd/biocontainers:mulled-v2"
     conda "envs/biopython.yml"
 
     input:
@@ -140,7 +140,7 @@ process mmseqs_100id_cluster {
     memory = '10 GB'
     cpus = 8
     
-    container "quay.io/biocontainers/mmseqs2:15.6f452--pl5321h6a68c12_3"
+    container "812206152185.dkr.ecr.us-west-2.amazonaws.com/elizabethmcd/biocontainers:mmseqs2"
     conda "envs/mmseqs2.yml"
 
     input:
@@ -163,7 +163,7 @@ process count_smorf_peptides {
     memory = "5 GB"
     cpus = 1
     
-    container "quay.io/biocontainers/mulled-v2-949aaaddebd054dc6bded102520daff6f0f93ce6:aa2a3707bfa0550fee316844baba7752eaab7802-0"
+    container "812206152185.dkr.ecr.us-west-2.amazonaws.com/elizabethmcd/biocontainers:mulled-v2"
     conda "envs/biopython.yml"
 
     input:
@@ -186,7 +186,7 @@ process pyrodigal {
     memory = "5 GB"
     cpus = 1
 
-    container "quay.io/biocontainers/pyrodigal:3.5.2--py38h0020b31_0"
+    container "812206152185.dkr.ecr.us-west-2.amazonaws.com/elizabethmcd/biocontainers:pyrodigal"
     conda "envs/pyrodigal.yml"
 
     input:
@@ -215,7 +215,7 @@ process antismash {
     memory = "20 GB"
     cpus = 4
 
-    container "quay.io/biocontainers/antismash-lite:7.1.0--pyhdfd78af_0"
+    container "812206152185.dkr.ecr.us-west-2.amazonaws.com/elizabethmcd/biocontainers:antismash-lite"
     conda "envs/antismashlite.yml"
 
     input:
@@ -245,7 +245,7 @@ process extract_antismash_info {
     memory = "1 GB"
     cpus = 1
 
-    container "quay.io/biocontainers/mulled-v2-949aaaddebd054dc6bded102520daff6f0f93ce6:aa2a3707bfa0550fee316844baba7752eaab7802-0"
+    container "812206152185.dkr.ecr.us-west-2.amazonaws.com/elizabethmcd/biocontainers:mulled-v2"
     conda "envs/biopython.yml"
 
     input:
@@ -267,7 +267,7 @@ process run_bigscape {
     memory = "20 GB"
     cpus = 6
     
-    container "quay.io/biocontainers/bigscape:1.1.9--pyhdfd78af_0"
+    container "812206152185.dkr.ecr.us-west-2.amazonaws.com/elizabethmcd/biocontainers:bigscape"
     conda "envs/bigscape.yml"
 
     input:
@@ -291,7 +291,7 @@ process deepsig {
     accelerator 1, type: 'nvidia-t4'
     cpus = 8
     
-    container "quay.io/biocontainers/deepsig:1.2.5--pyhca03a8a_1"
+    container "812206152185.dkr.ecr.us-west-2.amazonaws.com/elizabethmcd/biocontainers:deepsig"
     conda "envs/deepsig.yml"
 
     input: 
@@ -335,7 +335,7 @@ process make_diamond_db {
     memory = "5 GB"
     cpus = 1
 
-    container "quay.io/biocontainers/diamond:2.1.9--h43eeafb_0"
+    container "812206152185.dkr.ecr.us-west-2.amazonaws.com/elizabethmcd/biocontainers:diamond"
     conda "envs/diamond.yml"
 
     input:
@@ -356,7 +356,7 @@ process diamond_blastp {
 
     memory = "10 GB"
 
-    container "quay.io/biocontainers/diamond:2.1.9--h43eeafb_0"
+    container "812206152185.dkr.ecr.us-west-2.amazonaws.com/elizabethmcd/biocontainers:diamond"
     conda "envs/diamond.yml"
 
     input:
