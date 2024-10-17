@@ -212,6 +212,8 @@ process antismash {
     tag "${genome_name}_antismash"
     publishDir "${params.outdir}/antismash", mode: 'copy'
 
+    errorStrategy 'ignore'
+
     memory = "20 GB"
     cpus = 4
 
