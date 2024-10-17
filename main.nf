@@ -314,7 +314,7 @@ process characterize_peptides {
     memory = "5 GB"
     cpus = 1
 
-    container "812206152185.dkr.ecr.us-west-2.amazonaws.com/elizabethmcd/peptides:latest`"
+    container "812206152185.dkr.ecr.us-west-2.amazonaws.com/elizabethmcd/peptides:latest"
     conda "envs/peptides.yml"
 
     input:
