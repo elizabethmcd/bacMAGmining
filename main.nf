@@ -82,6 +82,8 @@ process smorfinder {
     tag "${genome_name}_smorfinder"
     publishDir "${params.outdir}/smorfinder", mode: 'copy'
 
+    errorStrategy 'ignore' // skip the genome if can't process
+
     memory = '10 GB'
     cpus = 4
 
