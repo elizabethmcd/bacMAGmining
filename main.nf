@@ -82,8 +82,6 @@ process smorfinder {
     tag "${genome_name}_smorfinder"
     publishDir "${params.outdir}/smorfinder", mode: 'copy'
 
-    errorStrategy 'ignore' // skip the genome if can't process
-
     memory = '10 GB'
     cpus = 4
 
@@ -211,8 +209,6 @@ process pyrodigal {
 process antismash {
     tag "${genome_name}_antismash"
     publishDir "${params.outdir}/antismash", mode: 'copy'
-
-    errorStrategy 'ignore'
 
     memory = "20 GB"
     cpus = 4
