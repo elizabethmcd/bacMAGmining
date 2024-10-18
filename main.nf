@@ -266,7 +266,7 @@ process run_bigscape {
     memory = "20 GB"
     cpus = 6
     
-    container "public.ecr.aws/biocontainers/bigscape:1.1.4--pyhdfd78af_0"
+    container "quay.io/biocontainers/bigscape:1.1.9--pyhdfd78af_0"
     conda "envs/bigscape.yml"
 
     input:
