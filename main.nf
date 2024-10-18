@@ -236,6 +236,7 @@ process antismash {
         --output-basename ${genome_name} \\
         --logfile ${genome_name}/${genome_name}.log \\
         --databases $databases \\
+        --genefinding-tool none \\
         ${gbk_file}
     """
 }
